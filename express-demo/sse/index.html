@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      const eventSource = new EventSource('http://localhost:3000/sse');
+
+      // 处理接收到的 SSE 数据
+      eventSource.onmessage = (event) => {
+        console.log(event.data);
+      };
+
+      // 处理 SSE 连接错误
+      eventSource.onerror = (error) => {
+        console.error('SSE error:', error);
+      };
+    </script>
+  </body>
+</html>
