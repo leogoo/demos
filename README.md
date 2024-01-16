@@ -1,5 +1,58 @@
 > 各种demo集合的仓库，用于记录一些框架或第三方包的使用方式和注意点
 
+### node调试
+1. 浏览器
+  1. 执行脚本时命令`node --inspect-brk index.js`
+  1. 谷歌浏览器打开`chrome://inspect/#devices`
+1. vscode
+
+### nest
+1. cli
+  - 安装: `npm i -g @nestjs/cli`
+  - 创建项目：`nest new project-name`
+  - 创建模块：`nest g module test`
+1. 静态资源服务
+  - 安装 `npm install --save @nestjs/serve-static`
+  - 主模块配置:
+    ```js
+    import { Module } from '@nestjs/common';
+    import { AppController } from './app.controller';
+    import { AppService } from './app.service';
+    import { PersonModule } from './person/person.module';
+    import { ServeStaticModule } from '@nestjs/serve-static';
+    import { join } from 'path';
+
+    @Module({
+      imports: [
+        PersonModule,
+        ServeStaticModule.forRoot({
+          rootPath: join(__dirname, '..', 'public'),
+        }),
+      ],
+      controllers: [AppController],
+      providers: [AppService],
+    })
+    export class AppModule {}
+    ```
+  - 访问: `http://127.0.0.1:3000/public/index.html`
+1. 接口参数处理
+  - form-data
+1. 其他
+  1. 全局模块
+    ```js
+    import { Module, Global } from '@nestjs/common';
+    import { CreatureService } from './creature.service';
+    import { CreatureController } from './creature.controller';
+
+    @Global() // 声明为全局
+    @Module({
+      controllers: [CreatureController],
+      providers: [CreatureService],
+      exports: [CreatureService],
+    })
+    export class CreatureModule {}
+    ```
+
 ### next
 1. route
   1. 根据文件路径作为路由，每个文件夹下需要有一个page.tsx
