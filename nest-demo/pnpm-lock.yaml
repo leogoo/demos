@@ -7,19 +7,28 @@ settings:
 dependencies:
   '@nestjs/common':
     specifier: ^10.0.0
-    version: registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+    version: registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
   '@nestjs/core':
     specifier: ^10.0.0
     version: registry.npmmirror.com/@nestjs/core@10.0.0(@nestjs/common@10.0.0)(@nestjs/platform-express@10.0.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
   '@nestjs/mapped-types':
     specifier: '*'
-    version: registry.npmmirror.com/@nestjs/mapped-types@0.0.1(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)
+    version: registry.npmmirror.com/@nestjs/mapped-types@0.0.1(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)
   '@nestjs/platform-express':
     specifier: ^10.0.0
     version: registry.npmmirror.com/@nestjs/platform-express@10.0.0(@nestjs/common@10.0.0)(@nestjs/core@10.0.0)
   '@nestjs/serve-static':
     specifier: ^4.0.0
     version: registry.npmmirror.com/@nestjs/serve-static@4.0.0(@nestjs/common@10.0.0)(@nestjs/core@10.0.0)
+  class-transformer:
+    specifier: ^0.5.1
+    version: registry.npmmirror.com/class-transformer@0.5.1
+  class-validator:
+    specifier: ^0.14.1
+    version: registry.npmmirror.com/class-validator@0.14.1
+  express-session:
+    specifier: ^1.17.3
+    version: registry.npmmirror.com/express-session@1.17.3
   path:
     specifier: ^0.12.7
     version: registry.npmmirror.com/path@0.12.7
@@ -1046,7 +1055,7 @@ packages:
       - webpack-cli
     dev: true
 
-  registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1):
+  registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1):
     resolution: {integrity: sha512-Fa2GDQJrO5TTTcpISWfm0pdPS62V+8YbxeG5CA01zMUI+dCO3v3oFf+BSjqCGUUo7GDNzDsjAejwGXuqA54RPw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@nestjs/common/-/common-10.0.0.tgz}
     id: registry.npmmirror.com/@nestjs/common/10.0.0
     name: '@nestjs/common'
@@ -1062,8 +1071,8 @@ packages:
       class-validator:
         optional: true
     dependencies:
-      class-transformer: registry.npmmirror.com/class-transformer@0.2.3
-      class-validator: registry.npmmirror.com/class-validator@0.11.1
+      class-transformer: registry.npmmirror.com/class-transformer@0.5.1
+      class-validator: registry.npmmirror.com/class-validator@0.14.1
       iterare: registry.npmmirror.com/iterare@1.2.1
       reflect-metadata: registry.npmmirror.com/reflect-metadata@0.1.13
       rxjs: registry.npmmirror.com/rxjs@7.8.1
@@ -1091,7 +1100,7 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/platform-express': registry.npmmirror.com/@nestjs/platform-express@10.0.0(@nestjs/common@10.0.0)(@nestjs/core@10.0.0)
       '@nuxtjs/opencollective': registry.npmmirror.com/@nuxtjs/opencollective@0.3.2
       fast-safe-stringify: registry.npmmirror.com/fast-safe-stringify@2.1.1
@@ -1104,7 +1113,7 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  registry.npmmirror.com/@nestjs/mapped-types@0.0.1(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13):
+  registry.npmmirror.com/@nestjs/mapped-types@0.0.1(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13):
     resolution: {integrity: sha512-4G4Ui7Sj0UqXiZsUFk/6cPD3K7uZEFSElzkOftaJ3/lXW+HUi1/vfWXabF53qrzO1enTRQDxt1plDbP6SsqXEg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@nestjs/mapped-types/-/mapped-types-0.0.1.tgz}
     id: registry.npmmirror.com/@nestjs/mapped-types/0.0.1
     name: '@nestjs/mapped-types'
@@ -1114,8 +1123,8 @@ packages:
       class-validator: ^0.11.1
       reflect-metadata: ^0.1.12
     dependencies:
-      class-transformer: registry.npmmirror.com/class-transformer@0.2.3
-      class-validator: registry.npmmirror.com/class-validator@0.11.1
+      class-transformer: registry.npmmirror.com/class-transformer@0.5.1
+      class-validator: registry.npmmirror.com/class-validator@0.14.1
       reflect-metadata: registry.npmmirror.com/reflect-metadata@0.1.13
     dev: false
 
@@ -1128,7 +1137,7 @@ packages:
       '@nestjs/common': ^10.0.0
       '@nestjs/core': ^10.0.0
     dependencies:
-      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core': registry.npmmirror.com/@nestjs/core@10.0.0(@nestjs/common@10.0.0)(@nestjs/platform-express@10.0.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       body-parser: registry.npmmirror.com/body-parser@1.20.2
       cors: registry.npmmirror.com/cors@2.8.5
@@ -1175,7 +1184,7 @@ packages:
       fastify:
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core': registry.npmmirror.com/@nestjs/core@10.0.0(@nestjs/common@10.0.0)(@nestjs/platform-express@10.0.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       path-to-regexp: registry.npmmirror.com/path-to-regexp@0.2.5
     dev: false
@@ -1196,7 +1205,7 @@ packages:
       '@nestjs/platform-express':
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.2.3)(class-validator@0.11.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common@10.0.0(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core': registry.npmmirror.com/@nestjs/core@10.0.0(@nestjs/common@10.0.0)(@nestjs/platform-express@10.0.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/platform-express': registry.npmmirror.com/@nestjs/platform-express@10.0.0(@nestjs/common@10.0.0)(@nestjs/core@10.0.0)
       tslib: registry.npmmirror.com/tslib@2.5.3
@@ -1545,10 +1554,10 @@ packages:
       '@types/superagent': registry.npmmirror.com/@types/superagent@8.1.1
     dev: true
 
-  registry.npmmirror.com/@types/validator@10.11.3:
-    resolution: {integrity: sha512-GKF2VnEkMmEeEGvoo03ocrP9ySMuX1ypKazIYMlsjfslfBMhOAtC5dmEWKdJioW4lJN7MZRS88kalTsVClyQ9w==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/validator/-/validator-10.11.3.tgz}
+  registry.npmmirror.com/@types/validator@13.11.8:
+    resolution: {integrity: sha512-c/hzNDBh7eRF+KbCf+OoZxKbnkpaK/cKp9iLQWqB7muXtM+MtL9SUUH8vCFcLn6dH1Qm05jiexK0ofWY7TfOhQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/validator/-/validator-13.11.8.tgz}
     name: '@types/validator'
-    version: 10.11.3
+    version: 13.11.8
 
   registry.npmmirror.com/@types/yargs-parser@21.0.3:
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/@types/yargs-parser/-/yargs-parser-21.0.3.tgz}
@@ -2418,19 +2427,19 @@ packages:
     version: 1.2.3
     dev: true
 
-  registry.npmmirror.com/class-transformer@0.2.3:
-    resolution: {integrity: sha512-qsP+0xoavpOlJHuYsQJsN58HXSl8Jvveo+T37rEvCEeRfMWoytAyR0Ua/YsFgpM6AZYZ/og2PJwArwzJl1aXtQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/class-transformer/-/class-transformer-0.2.3.tgz}
+  registry.npmmirror.com/class-transformer@0.5.1:
+    resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/class-transformer/-/class-transformer-0.5.1.tgz}
     name: class-transformer
-    version: 0.2.3
+    version: 0.5.1
 
-  registry.npmmirror.com/class-validator@0.11.1:
-    resolution: {integrity: sha512-6CGdjwJLmKw+sQbK5ZDo1v1yTajkqfPOUDWSYVIlhUiCh6Phy8sAnMFE2XKHAcKAdoOz4jJUQhjPQWPYUuHxrA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/class-validator/-/class-validator-0.11.1.tgz}
+  registry.npmmirror.com/class-validator@0.14.1:
+    resolution: {integrity: sha512-2VEG9JICxIqTpoK1eMzZqaV+u/EiwEJkMGzTrZf6sU/fwsnOITVgYJ8yojSy6CaXtO9V0Cc6ZQZ8h8m4UBuLwQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/class-validator/-/class-validator-0.14.1.tgz}
     name: class-validator
-    version: 0.11.1
+    version: 0.14.1
     dependencies:
-      '@types/validator': registry.npmmirror.com/@types/validator@10.11.3
-      google-libphonenumber: registry.npmmirror.com/google-libphonenumber@3.2.34
-      validator: registry.npmmirror.com/validator@12.0.0
+      '@types/validator': registry.npmmirror.com/@types/validator@13.11.8
+      libphonenumber-js: registry.npmmirror.com/libphonenumber-js@1.10.53
+      validator: registry.npmmirror.com/validator@13.11.0
 
   registry.npmmirror.com/cli-cursor@3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/cli-cursor/-/cli-cursor-3.1.0.tgz}
@@ -2611,6 +2620,13 @@ packages:
     resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/cookie-signature/-/cookie-signature-1.0.6.tgz}
     name: cookie-signature
     version: 1.0.6
+
+  registry.npmmirror.com/cookie@0.4.2:
+    resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/cookie/-/cookie-0.4.2.tgz}
+    name: cookie
+    version: 0.4.2
+    engines: {node: '>= 0.6'}
+    dev: false
 
   registry.npmmirror.com/cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/cookie/-/cookie-0.5.0.tgz}
@@ -3158,6 +3174,24 @@ packages:
       jest-util: registry.npmmirror.com/jest-util@29.7.0
     dev: true
 
+  registry.npmmirror.com/express-session@1.17.3:
+    resolution: {integrity: sha512-4+otWXlShYlG1Ma+2Jnn+xgKUZTMJ5QD3YvfilX3AcocOAbIkVylSWEklzALe/+Pu4qV6TYBj5GwOBFfdKqLBw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/express-session/-/express-session-1.17.3.tgz}
+    name: express-session
+    version: 1.17.3
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      cookie: registry.npmmirror.com/cookie@0.4.2
+      cookie-signature: registry.npmmirror.com/cookie-signature@1.0.6
+      debug: registry.npmmirror.com/debug@2.6.9
+      depd: registry.npmmirror.com/depd@2.0.0
+      on-headers: registry.npmmirror.com/on-headers@1.0.2
+      parseurl: registry.npmmirror.com/parseurl@1.3.3
+      safe-buffer: registry.npmmirror.com/safe-buffer@5.2.1
+      uid-safe: registry.npmmirror.com/uid-safe@2.1.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   registry.npmmirror.com/express@4.18.2:
     resolution: {integrity: sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/express/-/express-4.18.2.tgz}
     name: express
@@ -3570,12 +3604,6 @@ packages:
       merge2: registry.npmmirror.com/merge2@1.4.1
       slash: registry.npmmirror.com/slash@3.0.0
     dev: true
-
-  registry.npmmirror.com/google-libphonenumber@3.2.34:
-    resolution: {integrity: sha512-CLwkp0lZvMywh6dCh0T3Fm8XsfJhLAupc8AECwYkJNQBPW8wQPrv/tV0oFKCs8FMw+pTQyNPZoycgBzYjqtTZQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/google-libphonenumber/-/google-libphonenumber-3.2.34.tgz}
-    name: google-libphonenumber
-    version: 3.2.34
-    engines: {node: '>=0.10'}
 
   registry.npmmirror.com/gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/gopd/-/gopd-1.0.1.tgz}
@@ -4589,6 +4617,11 @@ packages:
       type-check: registry.npmmirror.com/type-check@0.4.0
     dev: true
 
+  registry.npmmirror.com/libphonenumber-js@1.10.53:
+    resolution: {integrity: sha512-sDTnnqlWK4vH4AlDQuswz3n4Hx7bIQWTpIcScJX+Sp7St3LXHmfiax/ZFfyYxHmkdCvydOLSuvtAO/XpXiSySw==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/libphonenumber-js/-/libphonenumber-js-1.10.53.tgz}
+    name: libphonenumber-js
+    version: 1.10.53
+
   registry.npmmirror.com/lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz}
     name: lines-and-columns
@@ -4974,6 +5007,13 @@ packages:
     dependencies:
       ee-first: registry.npmmirror.com/ee-first@1.1.1
 
+  registry.npmmirror.com/on-headers@1.0.2:
+    resolution: {integrity: sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/on-headers/-/on-headers-1.0.2.tgz}
+    name: on-headers
+    version: 1.0.2
+    engines: {node: '>= 0.8'}
+    dev: false
+
   registry.npmmirror.com/once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/once/-/once-1.4.0.tgz}
     name: once
@@ -5324,6 +5364,13 @@ packages:
     name: queue-microtask
     version: 1.2.3
     dev: true
+
+  registry.npmmirror.com/random-bytes@1.0.0:
+    resolution: {integrity: sha512-iv7LhNVO047HzYR3InF6pUcUsPQiHTM1Qal51DcGSuZFBil1aBBWG5eHPNek7bvILMaYJ/8RU1e8w1AMdHmLQQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/random-bytes/-/random-bytes-1.0.0.tgz}
+    name: random-bytes
+    version: 1.0.0
+    engines: {node: '>= 0.8'}
+    dev: false
 
   registry.npmmirror.com/randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/randombytes/-/randombytes-2.1.0.tgz}
@@ -6238,6 +6285,15 @@ packages:
     hasBin: true
     dev: true
 
+  registry.npmmirror.com/uid-safe@2.1.5:
+    resolution: {integrity: sha512-KPHm4VL5dDXKz01UuEd88Df+KzynaohSL9fBh096KWAxSKZQDI2uBrVqtvRM4rwrIrRRKsdLNML/lnaaVSRioA==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/uid-safe/-/uid-safe-2.1.5.tgz}
+    name: uid-safe
+    version: 2.1.5
+    engines: {node: '>= 0.8'}
+    dependencies:
+      random-bytes: registry.npmmirror.com/random-bytes@1.0.0
+    dev: false
+
   registry.npmmirror.com/uid@2.0.2:
     resolution: {integrity: sha512-u3xV3X7uzvi5b1MncmZo3i2Aw222Zk1keqLA1YkHldREkAhAqi65wuPfe7lHx8H/Wzy+8CE7S7uS3jekIM5s8g==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/uid/-/uid-2.0.2.tgz}
     name: uid
@@ -6317,10 +6373,10 @@ packages:
       convert-source-map: registry.npmmirror.com/convert-source-map@2.0.0
     dev: true
 
-  registry.npmmirror.com/validator@12.0.0:
-    resolution: {integrity: sha512-r5zA1cQBEOgYlesRmSEwc9LkbfNLTtji+vWyaHzRZUxCTHdsX3bd+sdHfs5tGZ2W6ILGGsxWxCNwT/h3IY/3ng==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/validator/-/validator-12.0.0.tgz}
+  registry.npmmirror.com/validator@13.11.0:
+    resolution: {integrity: sha512-Ii+sehpSfZy+At5nPdnyMhx78fEoPDkR2XW/zimHEL3MyGJQOCQ7WeP20jPYRz7ZCpcKLB21NxuXHF3bxjStBQ==, registry: http://plat-registry-npm.mihoyo.com/, tarball: https://registry.npmmirror.com/validator/-/validator-13.11.0.tgz}
     name: validator
-    version: 12.0.0
+    version: 13.11.0
     engines: {node: '>= 0.10'}
 
   registry.npmmirror.com/vary@1.1.2:
