@@ -1,0 +1,17 @@
+# 基于MySQL官方镜像构建自定义镜像
+FROM mysql:latest
+
+# 设置MySQL的root密码
+ENV MYSQL_ROOT_PASSWORD 123456
+
+# 添加自定义配置文件到容器中
+COPY ./my.cnf /etc/mysql/my.cnf
+
+# 如果需要，添加初始化SQL脚本到容器中
+COPY ./init.sql /docker-entrypoint-initdb.d/
+
+# 容器端口号
+EXPOSE 3306
+
+# 容器启动时执行的命令
+CMD ["mysqld"]
