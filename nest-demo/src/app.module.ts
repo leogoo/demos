@@ -7,9 +7,14 @@ import { join } from 'path';
 import { CreatureModule } from './creature/creature.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
+    JwtModule.register({
+      secret: 'secret',
+      signOptions: { expiresIn: '1000s' },
+    }),
     PersonModule,
     UserModule,
     ServeStaticModule.forRoot({
